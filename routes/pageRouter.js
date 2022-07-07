@@ -30,16 +30,6 @@ router.get('/blog', (req, res) => {
     res.redirect('/');
 })
 
-router.get("/about-me", async (req, res) => {
-    try {
-        let footerBlogs = await Blog.find().sort({ date: -1 }).limit(3);
-        res.render("about", { footerBlogs });
-    } catch (error) {
-        console.log(error);
-        res.redirect('/blog');
-    }
-});
-
 router.get("/contact-me", async (req, res) => {
     try {
         let footerBlogs = await Blog.find().sort({ date: -1 }).limit(3);

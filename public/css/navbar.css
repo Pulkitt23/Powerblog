@@ -12,9 +12,9 @@ img{
 }
 
 :root{
-    --navbar-bg: rgb(181, 20, 248);
+    --navbar-bg: rgb(179, 141, 6);
     --navbar-text-color : #fff;
-    --navbar-hover-color: rgb(95, 0, 136);
+    --navbar-hover-color: rgb(53, 41, 0);
     --search-btn-bg:  #f8f9fa;
     --search-btn-hover-bg: #e6e6e6;
     --search-btn-text-color : rgb(0, 0, 0);

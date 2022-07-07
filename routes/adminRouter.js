@@ -10,6 +10,20 @@ router.get("/", checkNotAuthenticated, (req, res) => {
     res.render("admin");
 });
 
+// router.post('/sign-up', async (req, res)=>{
+//     try {
+//         const hashPassword = await bcrypt.hash(req.body.password, 10);
+//         let user = new User({
+//             username: req.body.username,
+//             password: hashPassword
+//         })
+//         await user.save();
+//         res.redirect('/');
+//     } catch(err) {
+//         console.log(err);
+//     }
+// })
+
 router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
     successRedirect: '/admin/blog',
     failureRedirect: '/admin',
